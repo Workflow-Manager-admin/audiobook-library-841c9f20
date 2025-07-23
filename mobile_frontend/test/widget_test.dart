@@ -3,16 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mobile_frontend/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('mobile_frontend App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-  });
-
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('mobile_frontend'), findsOneWidget);
+  // Basic smoke test for the AudiobookApp (renders main structure).
+  testWidgets('Main AudiobookApp renders', (WidgetTester tester) async {
+    await tester.pumpWidget(const AudiobookApp());
+    expect(find.byType(MaterialApp), findsOneWidget);
+    expect(find.byType(MainTabScreen), findsOneWidget);
   });
 }

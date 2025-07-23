@@ -1,16 +1,33 @@
 # mobile_frontend
 
-A new Flutter project.
+Audiobook Store and Player App (Flutter)
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Modern, light, minimalistic design
+- Tab-based UI: Store, Library, Player
+- Browse and purchase audiobooks (Store)
+- Personal Library of purchased books, with reading progress bars
+- Audiobook Player: cover art, progress slider, 15s skip controls, stop
+- Persistent local storage of library and playback position with `shared_preferences`
+- Fully offline operation (no backend required)
 
-A few resources to get you started if this is your first Flutter project:
+## Usage
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Buy books in Store tab; own them in Library tab.
+- Tap a library book to play.
+- Use Player tab for audio controls; progress saved locally.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech
+
+- Flutter 3.x+
+- Provider for state management
+- Shared Preferences for local storage (mimics library + progress save)
+
+## For Developers
+
+- To test, simply run: `flutter run`
+- Demo data and covers are hardcoded for standalone functionality
+- No actual audio is played (UI only); can be extended with `just_audio`, etc.
+
+---
